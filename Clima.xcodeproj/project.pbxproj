@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		D0F7293C26FB9BAE005959DA /* ClimaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7293B26FB9BAE005959DA /* ClimaApp.swift */; };
-		D0F7293E26FB9BAE005959DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7293D26FB9BAE005959DA /* ContentView.swift */; };
+		D0F7293E26FB9BAE005959DA /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7293D26FB9BAE005959DA /* WeatherView.swift */; };
 		D0F7294026FB9BB0005959DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F7293F26FB9BB0005959DA /* Assets.xcassets */; };
 		D0F7294326FB9BB0005959DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F7294226FB9BB0005959DA /* Preview Assets.xcassets */; };
+		D0F7294B26FB9E19005959DA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7294A26FB9E19005959DA /* DataService.swift */; };
+		D0F7294E26FBA60F005959DA /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7294D26FBA60F005959DA /* WeatherCondition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0F7293826FB9BAE005959DA /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F7293B26FB9BAE005959DA /* ClimaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaApp.swift; sourceTree = "<group>"; };
-		D0F7293D26FB9BAE005959DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D0F7293D26FB9BAE005959DA /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		D0F7293F26FB9BB0005959DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F7294226FB9BB0005959DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D0F7294A26FB9E19005959DA /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D0F7294D26FBA60F005959DA /* WeatherCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		D0F7293A26FB9BAE005959DA /* Clima */ = {
 			isa = PBXGroup;
 			children = (
+				D0F7294C26FBA604005959DA /* Model */,
+				D0F7294926FB9E02005959DA /* DataService */,
 				D0F7293B26FB9BAE005959DA /* ClimaApp.swift */,
-				D0F7293D26FB9BAE005959DA /* ContentView.swift */,
+				D0F7293D26FB9BAE005959DA /* WeatherView.swift */,
 				D0F7293F26FB9BB0005959DA /* Assets.xcassets */,
 				D0F7294126FB9BB0005959DA /* Preview Content */,
 			);
@@ -65,6 +71,22 @@
 				D0F7294226FB9BB0005959DA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0F7294926FB9E02005959DA /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				D0F7294A26FB9E19005959DA /* DataService.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
+		D0F7294C26FBA604005959DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0F7294D26FBA60F005959DA /* WeatherCondition.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F7293E26FB9BAE005959DA /* ContentView.swift in Sources */,
+				D0F7294E26FBA60F005959DA /* WeatherCondition.swift in Sources */,
+				D0F7294B26FB9E19005959DA /* DataService.swift in Sources */,
+				D0F7293E26FB9BAE005959DA /* WeatherView.swift in Sources */,
 				D0F7293C26FB9BAE005959DA /* ClimaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
