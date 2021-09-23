@@ -13,6 +13,9 @@
 		D0F7294326FB9BB0005959DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F7294226FB9BB0005959DA /* Preview Assets.xcassets */; };
 		D0F7294B26FB9E19005959DA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7294A26FB9E19005959DA /* DataService.swift */; };
 		D0F7294E26FBA60F005959DA /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7294D26FBA60F005959DA /* WeatherCondition.swift */; };
+		D0F7295126FC5EEC005959DA /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7295026FC5EEC005959DA /* WeatherViewModel.swift */; };
+		D0F7295426FC6541005959DA /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7295326FC6541005959DA /* WeatherData.swift */; };
+		D0F7295726FC795E005959DA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D0F7295626FC795E005959DA /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,8 @@
 		D0F7294226FB9BB0005959DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0F7294A26FB9E19005959DA /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D0F7294D26FBA60F005959DA /* WeatherCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
+		D0F7295026FC5EEC005959DA /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		D0F7295326FC6541005959DA /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F7295726FC795E005959DA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,10 +61,11 @@
 		D0F7293A26FB9BAE005959DA /* Clima */ = {
 			isa = PBXGroup;
 			children = (
+				D0F7295226FC5F0A005959DA /* View */,
+				D0F7294F26FC5EDE005959DA /* ViewModel */,
 				D0F7294C26FBA604005959DA /* Model */,
 				D0F7294926FB9E02005959DA /* DataService */,
 				D0F7293B26FB9BAE005959DA /* ClimaApp.swift */,
-				D0F7293D26FB9BAE005959DA /* WeatherView.swift */,
 				D0F7293F26FB9BB0005959DA /* Assets.xcassets */,
 				D0F7294126FB9BB0005959DA /* Preview Content */,
 			);
@@ -85,8 +92,25 @@
 			isa = PBXGroup;
 			children = (
 				D0F7294D26FBA60F005959DA /* WeatherCondition.swift */,
+				D0F7295326FC6541005959DA /* WeatherData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D0F7294F26FC5EDE005959DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D0F7295026FC5EEC005959DA /* WeatherViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D0F7295226FC5F0A005959DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0F7293D26FB9BAE005959DA /* WeatherView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +129,9 @@
 			dependencies = (
 			);
 			name = Clima;
+			packageProductDependencies = (
+				D0F7295626FC795E005959DA /* Alamofire */,
+			);
 			productName = Clima;
 			productReference = D0F7293826FB9BAE005959DA /* Clima.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +160,9 @@
 				Base,
 			);
 			mainGroup = D0F7292F26FB9BAE005959DA;
+			packageReferences = (
+				D0F7295526FC795E005959DA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = D0F7293926FB9BAE005959DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,9 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F7295126FC5EEC005959DA /* WeatherViewModel.swift in Sources */,
 				D0F7294E26FBA60F005959DA /* WeatherCondition.swift in Sources */,
 				D0F7294B26FB9E19005959DA /* DataService.swift in Sources */,
 				D0F7293E26FB9BAE005959DA /* WeatherView.swift in Sources */,
+				D0F7295426FC6541005959DA /* WeatherData.swift in Sources */,
 				D0F7293C26FB9BAE005959DA /* ClimaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +328,7 @@
 				DEVELOPMENT_TEAM = 282GM4A2S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Hi User!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -326,6 +359,7 @@
 				DEVELOPMENT_TEAM = 282GM4A2S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Hi User!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -367,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0F7295526FC795E005959DA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0F7295626FC795E005959DA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0F7295526FC795E005959DA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0F7293026FB9BAE005959DA /* Project object */;
 }
